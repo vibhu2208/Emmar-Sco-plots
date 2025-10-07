@@ -18,9 +18,14 @@
             </div>
             <div class="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#projects" class="nav-link">Projects</a>
+                <div class="nav-dropdown">
+                    <a href="#commercial-projects" class="nav-link has-dropdown">Commercial Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="#commercial-projects" data-filter="ongoing" class="dropdown-item">Ongoing Projects</a>
+                        <a href="#commercial-projects" data-filter="completed" class="dropdown-item">Completed Projects</a>
+                    </div>
+                </div>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#agents" class="nav-link">Agents</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-cta">
@@ -35,11 +40,11 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <h1 class="hero-title">Your Next Landmark Investment Awaits.</h1>
-            <p class="hero-subtitle">Discover Emaar SCO's premium spaces designed for visionaries and modern businesses.</p>
+            <h1 class="hero-title">Redefining Commercial Spaces with EMAAR.</h1>
+            <p class="hero-subtitle">Experience world-class business hubs built for modern visionaries.</p>
             <div class="hero-buttons">
-                <button class="btn-primary">Explore Projects</button>
-                <button class="btn-secondary">Schedule a Visit</button>
+                <button class="btn-primary" data-filter="ongoing">View Ongoing Projects</button>
+                <button class="btn-secondary" data-filter="completed">Explore Completed Projects</button>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -98,6 +103,174 @@
             </div>
             <div class="section-cta">
                 <a href="#" class="view-all-link">View All Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Projects Section -->
+    <section id="commercial-projects" class="commercial-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Commercial Projects</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">Discover our ongoing and completed commercial developments.</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-tab active" data-view="ongoing">Ongoing Projects</button>
+                <button class="filter-tab" data-view="completed">Completed Projects</button>
+            </div>
+
+            <div class="projects-view" id="projects-ongoing">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&h=500&fit=crop&crop=center" alt="Emaar India Business Centre">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar India Business Centre</h3>
+                            <p class="project-subtitle">Emaar India Business Centre</p>
+                            <span class="project-tag">SHOP CUM OFFICE</span>
+                            <a href="#" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&h=500&fit=crop&crop=center" alt="EBD 83 – SCO Plots">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">EBD 83 – SCO Plots</h3>
+                            <p class="project-subtitle">Emaar Business District 83</p>
+                            <span class="project-tag">A thriving location. A great investment.</span>
+                            <span class="project-type">SHOP CUM OFFICE</span>
+                            <a href="#" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-view hidden" id="projects-completed">
+                <div class="projects-grid completed">
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&h=500&fit=crop&crop=center" alt="EMAAR BUSINESS DISTRICT 114 NXT">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">EMAAR BUSINESS DISTRICT 114 NXT</h3>
+                            <p class="project-subtitle">INVEST. BUILD. GROW.</p>
+                            <span class="project-type">SHOP CUM OFFICE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=500&fit=crop&crop=center" alt="Emaar Business District 75A">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Business District 75A</h3>
+                            <p class="project-subtitle">A thriving location. A great investment.</p>
+                            <span class="project-type">COMMERCIAL SPACES</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&h=500&fit=crop&crop=center" alt="Emaar Business District 89 NXT">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Business District 89 NXT</h3>
+                            <p class="project-subtitle">RISE. BEYOND. LIMITS.</p>
+                            <span class="project-type">SHOP CUM OFFICE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&h=500&fit=crop&crop=center" alt="Emaar Business District 114">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Business District 114</h3>
+                            <p class="project-subtitle">SHOP. MEET. RISE.</p>
+                            <span class="project-type">SHOP CUM OFFICE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=500&fit=crop&crop=center" alt="EBD 65 – SCO Plots in Gurgaon">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">EBD 65 – SCO Plots in Gurgaon</h3>
+                            <p class="project-subtitle">SHOP. MEET. RISE.</p>
+                            <span class="project-type">SHOP CUM OFFICE</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&h=500&fit=crop&crop=center" alt="Emaar Emerald Plaza">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Emerald Plaza</h3>
+                            <p class="project-subtitle">FOR THE WORKAHOLICS AND THE SHOPAHOLICS.</p>
+                            <span class="project-type">COMMERCIAL SPACES</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&h=500&fit=crop&crop=center" alt="The Palm Square">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">The Palm Square</h3>
+                            <p class="project-subtitle">A BUSINESS AVENUE ENCOURAGING YOU TO TAKE ON THE WORLD!</p>
+                            <span class="project-type">COMMERCIAL SPACES</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&h=500&fit=crop&crop=center" alt="Emaar Capital Tower 1 & 2">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Capital Tower 1 & 2</h3>
+                            <p class="project-subtitle">A MUST-HAVE ADDRESS FOR THRIVING BUSINESSES.</p>
+                            <span class="project-type">COMMERCIAL SPACES</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=500&fit=crop&crop=center" alt="Central Plaza">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Central Plaza</h3>
+                            <p class="project-subtitle">A LUCRATIVE OPPORTUNITY AWAITS THE ENTREPRENEUR.</p>
+                            <span class="project-type">COMMERCIAL SPACES</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card sold">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&h=500&fit=crop&crop=center" alt="Emaar Emerald Hills">
+                            <span class="sold-badge">SOLD OUT</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Emaar Emerald Hills</h3>
+                            <p class="project-subtitle">Your lifestyle. Your space.</p>
+                            <span class="project-type">3 BHK LUXURY FLOORS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

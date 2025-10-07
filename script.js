@@ -48,6 +48,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Commercial Projects filter toggling
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.filter-tab');
+    const ongoing = document.getElementById('projects-ongoing');
+    const completed = document.getElementById('projects-completed');
+
+    function setView(view) {
+        if (!ongoing || !completed) return;
+        if (view === 'ongoing') {
+            ongoing.classList.remove('hidden');
+            completed.classList.add('hidden');
+        } else {
+            completed.classList.remove('hidden');
+            ongoing.classList.add('hidden');
+        }
+        tabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => setView(tab.dataset.view));
+    });
+
+    // Hook hero buttons and dropdown items
+    document.querySelectorAll('[data-filter="ongoing"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const sec = document.getElementById('commercial-projects');
+            if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
+            setTimeout(() => setView('ongoing'), 250);
+        });
+    });
+    document.querySelectorAll('[data-filter="completed"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const sec = document.getElementById('commercial-projects');
+            if (sec) { sec.scrollIntoView({ behavior: 'smooth' }); }
+            setTimeout(() => setView('completed'), 250);
+        });
+    });
+});
+
 // Property Card Hover Effects
 document.addEventListener('DOMContentLoaded', function() {
     const propertyCards = document.querySelectorAll('.property-card, .featured-card');
