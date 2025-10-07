@@ -8,6 +8,31 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Clickable nav dropdown (accessible)
+document.addEventListener('DOMContentLoaded', function() {
+    const dd = document.getElementById('navCommercial');
+    if (!dd) return;
+    const btn = dd.querySelector('button.has-dropdown');
+    const menu = dd.querySelector('.dropdown-menu');
+    if (!btn || !menu) return;
+
+    function open() {
+        dd.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+    }
+    function close() {
+        dd.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+    }
+    function toggle() {
+        if (dd.classList.contains('open')) close(); else open();
+    }
+
+    btn.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
+    btn.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+});
+
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -39,7 +64,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Apply fade-in animation to sections
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.latest-launches, .featured-properties');
+    const sections = document.querySelectorAll('.latest-launches, .featured-properties, #projects-ongoing .lux-card');
     sections.forEach(section => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(50px)';
