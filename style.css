@@ -430,10 +430,21 @@ body {
 .project-link { display: inline-block; margin-left: 10px; font-size: 0.9rem; color: #000; text-decoration: none; position: relative; }
 .project-link::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 0; height: 1px; background: #000; transition: width 0.3s ease; }
 .project-link:hover::after { width: 100%; }
-.projects-grid.completed .project-card:hover .project-content { background: #000; color: #fff; }
-.projects-grid.completed .project-card:hover .project-subtitle { color: #ddd; }
-.projects-grid.completed .project-card:hover .project-link { color: #fff; }
-.projects-grid.completed .project-card:hover .project-link::after { background: #fff; }
+/* Improved hover effect for completed project cards */
+.projects-grid.completed .project-card:hover .project-content {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+    color: #fff;
+    transform: translateY(-5px);
+}
+.projects-grid.completed .project-card:hover .project-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+.projects-grid.completed .project-card:hover .project-link {
+    color: #fff;
+}
+.projects-grid.completed .project-card:hover .project-link::after {
+    background: #fff;
+}
 
 /* Elegant horizontal layout for ongoing cards */
 #projects-ongoing .projects-grid { grid-template-columns: 1fr; gap: 24px; }

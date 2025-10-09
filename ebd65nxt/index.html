@@ -10,8 +10,26 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="wrap nav-inner">
+            <a href="#home" class="brand">
+                <img src="./images/logo.webp" alt="Emaar EBD 65 NXT Logo">
+                <span>EBD 65 NXT</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#master-plan">Master Plan</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <a href="#booking" class="btn-gold nav-cta">Enquire</a>
+        </div>
+    </nav>
     <!-- Hero -->
-    <header class="hero">
+    <header class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="wrap hero-content">
@@ -25,9 +43,9 @@
     </header>
 
     <!-- About -->
-    <section class="about wrap">
+    <section class="about wrap" id="about">
         <div class="about-media">
-            <img src="../ebd-83/property-image.jpg" alt="EBD 65 NXT Render">
+            <img src="./images/main-highlights.webp" alt="EBD 65 NXT Render">
         </div>
         <div class="about-text">
             <h2>About the Project</h2>
@@ -36,7 +54,7 @@
     </section>
 
     <!-- Highlights -->
-    <section class="highlights">
+    <section class="highlights" id="highlights">
         <div class="wrap">
             <h3 class="sec-title">Project Highlights</h3>
             <div class="cards">
@@ -73,7 +91,7 @@
     </section>
 
     <!-- Prices & Sizes -->
-    <section class="prices">
+    <section class="prices" id="prices">
         <div class="wrap">
             <h3 class="sec-title">Prices & Sizes</h3>
             <div class="table">
@@ -95,10 +113,10 @@
     </section>
 
     <!-- Location -->
-    <section class="location">
+    <section class="location" id="location">
         <div class="wrap grid-2">
             <div class="map">
-                <img src="../ebd-83/ebd83-amenities.jpg" alt="Location Map">
+                <img src="./images/plans/location-map.webp" alt="Location Map">
             </div>
             <div class="loc-text">
                 <h3 class="sec-title">Prime Location & Connectivity</h3>
@@ -112,9 +130,23 @@
     </section>
 
     <!-- Master Plan -->
-    <section class="master wrap">
+    <section class="master wrap" id="master-plan">
         <h3 class="sec-title">Emaar EBD 65 NXT Master Plan</h3>
-        <img class="plan" src="../ebd-83/property-image.jpg" alt="Master Plan">
+        <img class="plan" src="./images/plans/master-plan.webp" alt="Master Plan">
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="wrap">
+            <h3 class="sec-title">Gallery</h3>
+            <div class="gallery-grid">
+                <img src="./images/main-highlights.webp" alt="Project Highlight Image">
+                <img src="./images/gallery/ebd65nxt.webp" alt="EBD 65 NXT View">
+                <img src="./images/plans/location-map.webp" alt="Location Map">
+                <img src="./images/banner.webp" alt="Hero Banner">
+                <img src="./images/plans/master-plan.webp" alt="Master Plan">
+            </div>
+        </div>
     </section>
 
     <!-- Developer -->
