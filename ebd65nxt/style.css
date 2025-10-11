@@ -95,3 +95,4 @@ body{font-family:'Inter',sans-serif;color:#111;background:var(--bg);line-height:
 @media(max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}.grid-2,.about{grid-template-columns:1fr}}
 @media(max-width:768px){.cards{grid-template-columns:1fr}.cta-flex{flex-direction:column;align-items:flex-start}}
 
+
